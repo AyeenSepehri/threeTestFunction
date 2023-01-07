@@ -51,5 +51,26 @@ const prime_factors = (num) => {
   console.log(prime_factors(104));
   console.log(prime_factors(105));
 
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  //find the longest word in a string
   
+  function LongestWord(sen) { 
+
+    const noSpecialChars = sen.replace(/[^a-zA-Z0-9 ]/g, '');
+    let spilitingWords = noSpecialChars.split(" ")
+    
+    var longest = spilitingWords.reduce(
+        function (a, b) {
+            return a.length > b.length ? a : b;
+        }
+    );
+    
+      // code goes here  
+      return longest; 
+    
+    }
+       
+    // keep this function call here 
+    console.log(LongestWord("fun&!! time"));
 
